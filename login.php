@@ -3,6 +3,8 @@ session_start();
 error_reporting(0);
 if (isset($_SESSION["status"])) {
 if ($_SESSION["status"]=="loggedin") {
+//Don't think that you can hack session cookies... it all works in server side, you actually only see PHPSESSID which
+//contains the info like of a memory address which tells serevr where cookies are actually stored in the server
 header("Location: adminpanel.php");
 die;
 }
